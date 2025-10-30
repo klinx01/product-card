@@ -74,21 +74,19 @@
   font-weight: 400;
   font-size: 70px;
   line-height: 78px;
-  position: static;
   width: 846;
   height: 78;
   margin-top: 220px;
   left: 217px;
 }
 
-.background {
-  background-image: url("images/background.png");
+.background-flowers {
+  background-image: url("images/background-flowers.png");
   background-size: 790px 697px;
   background-position: 185px 100px;
   background-repeat: no-repeat;
   width: 790px;
-  height: 150px;
-  position: relative;
+  height: 97px;
   z-index: 1;
   top: 0px;
   left: 85px;
@@ -105,4 +103,11 @@
   flex-wrap: wrap;
   list-style: none;
   justify-content: center;
+}
+
+.content-wrapper {
+  position: relative;
+  background-image: url("images/background-flowers.png");
+  width: 1480px;
+  height: 1396px;
 }
