@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
   font-family: "Montserrat", Arial;
   font-weight: 400;
+  margin: 0px;
+  padding: 0px;
   font-size: 13px;
   line-height: 18px;
   color: #515076;
@@ -76,20 +76,13 @@
   line-height: 78px;
   width: 846;
   height: 78;
+  margin-bottom: 110px;
   margin-top: 220px;
   left: 217px;
 }
 
 .background-flowers {
-  background-image: url("images/background-flowers.png");
-  background-size: 790px 697px;
-  background-position: 185px 100px;
-  background-repeat: no-repeat;
-  width: 790px;
-  height: 97px;
-  z-index: 1;
-  top: 0px;
-  left: 85px;
+  height: 145px;
 }
 
 .product-wrapper {
@@ -98,7 +91,6 @@
   margin-left: 85px;
   margin-right: 85px;
   margin-bottom: 116px;
-  margin-top: 110px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -106,8 +98,11 @@
 }
 
 .content-wrapper {
-  position: relative;
   background-image: url("images/background-flowers.png");
+  background-size: 790px 697px;
+  background-position: 175px 133px;
+  background-repeat: no-repeat;
   width: 1480px;
   height: 1396px;
+  position: static;
 }
