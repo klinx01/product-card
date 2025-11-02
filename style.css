@@ -105,3 +105,17 @@
   width: 1480px;
   height: 1396px;
 }
+
+.black {
+  background-color: black;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.button {
+  margin-left: 185px;
+  display: flex;
+  gap: 46px;
+}
