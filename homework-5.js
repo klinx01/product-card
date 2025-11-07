@@ -10,7 +10,7 @@ news("Киевe", "17\u00B0")
 
 const SPEED_OF_SOUND = 343
 
-function calculateSpeed(currentSpeed) {
+function speedStorage(currentSpeed) {
   if (currentSpeed > SPEED_OF_SOUND) {
     console.log("Сверхзвуковая скорость")
   } else {
@@ -18,7 +18,7 @@ function calculateSpeed(currentSpeed) {
   }
 };
 
-calculateSpeed(394)
+speedStorage(394)
 
 // Задание №5, высчитать разницу
 
