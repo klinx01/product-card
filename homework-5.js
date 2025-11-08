@@ -23,13 +23,13 @@ compareSpeedOfSound(394)
 // Задание №5, высчитать разницу
 
 const product = "Чокопай"
-const ProductPrice = 289
+const productPrice = 289
 
 function buyProduct(currentBudget) {
-  if (currentBudget > ProductPrice) {
+  if (currentBudget > productPrice) {
     console.log(`Ваш ${product} приобретён. Спасибо за покупку!`)
   } else {
-    const difference = ProductPrice - currentBudget
+    const difference = productPrice - currentBudget
     console.log(`Вам не хватает ${difference}$, пополните баланс`)
   }
 };
