@@ -10,7 +10,7 @@ displayWeatherInfo("Киевe", "17\u00B0")
 
 const SPEED_OF_SOUND = 343
 
-function checkSpeedType(currentSpeed) {
+function compareSpeedOfSound(currentSpeed) {
   if (currentSpeed > SPEED_OF_SOUND) {
     console.log("Сверхзвуковая скорость")
   } else {
@@ -18,24 +18,24 @@ function checkSpeedType(currentSpeed) {
   }
 };
 
-checkSpeedType(394)
+compareSpeedOfSound(394)
 
 // Задание №5, высчитать разницу
 
-const productChocopay = "Чокопай"
-const ChocopayProductPrice = 289
+const product = "Чокопай"
+const ProductPrice = 289
 
-function buyProductChocopay(currentBudget) {
-  if (currentBudget > ChocopayProductPrice) {
-    console.log(`Ваш ${productChocopay} приобретён. Спасибо за покупку!`)
+function buyProduct(currentBudget) {
+  if (currentBudget > ProductPrice) {
+    console.log(`Ваш ${product} приобретён. Спасибо за покупку!`)
   } else {
-    const difference = ChocopayProductPrice - currentBudget
+    const difference = ProductPrice - currentBudget
     console.log(`Вам не хватает ${difference}$, пополните баланс`)
   }
 };
 
-buyProductChocopay(203)
-buyProductChocopay(411)
+buyProduct(203)
+buyProduct(411)
 
 // Задание №6, создавть 1 функцию
 
