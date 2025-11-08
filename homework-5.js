@@ -1,16 +1,16 @@
 // Задание №3, вывести  в консоль нововости
 
-function news(city, temperature) {
+function displayWeatherInfo(city, temperature) {
   console.log(`Сейчас в ${city} температура ${temperature} —  градусов по Цельсию`)
 };
 
-news("Киевe", "17\u00B0")
+displayWeatherInfo("Киевe", "17\u00B0")
 
 //Задание №4, сравнить скорость звука с помощью if else
 
 const SPEED_OF_SOUND = 343
 
-function speedStorage(currentSpeed) {
+function checkSpeedType(currentSpeed) {
   if (currentSpeed > SPEED_OF_SOUND) {
     console.log("Сверхзвуковая скорость")
   } else {
@@ -18,18 +18,18 @@ function speedStorage(currentSpeed) {
   }
 };
 
-speedStorage(394)
+checkSpeedType(394)
 
 // Задание №5, высчитать разницу
 
 const productChocopay = "Чокопай"
-const CHOCOPAY_PRODUCT_PRICE = 289
+const ChocopayProductPrice = 289
 
 function buyProductChocopay(currentBudget) {
-  if (currentBudget > CHOCOPAY_PRODUCT_PRICE) {
+  if (currentBudget > ChocopayProductPrice) {
     console.log(`Ваш ${productChocopay} приобретён. Спасибо за покупку!`)
   } else {
-    const difference = CHOCOPAY_PRODUCT_PRICE - currentBudget
+    const difference = ChocopayProductPrice - currentBudget
     console.log(`Вам не хватает ${difference}$, пополните баланс`)
   }
 };
