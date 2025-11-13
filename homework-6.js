@@ -8,7 +8,7 @@ const personalInfo = {
   job: "Frontend Developer",
   country: "Украина",
   city: "Одесса",
-  relationshipStatus: "Нет",
+  relationshipStatus: "Не женат",
   zodiacSign: "Дева"
 };
 
@@ -22,7 +22,7 @@ const carInfo = {
   transmission: "Механическая"
 };
 
-carInfo.owner = personalInfo.name;
+carInfo.owner = personalInfo;
 
 console.log(carInfo)
 
