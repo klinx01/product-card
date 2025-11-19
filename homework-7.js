@@ -1,8 +1,10 @@
+import { comments } from './comments.js';
+
 // Задание №2
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const numbersArray = numbers.slice(4, 10)
+const numbersArray = numbers.filter(number => number >= 5)
 
 console.log(numbersArray);
 
@@ -28,8 +30,6 @@ console.log(kitchenAppliances);
 
 // Задание №7
 
-import { comments } from './comments.js';
-
 const filteredComments = comments.filter(comment => comment.email.includes('.com')
 );
 
@@ -49,7 +49,7 @@ console.log(filteredIdName);
 
 // Задание №10
 
-const addedIsInvalid = comments.map(comment => ({ ...comments, isInvalid: comment.body.length > 180 ? true : false }));
+const addedIsInvalid = comments.map(comment => ({ ...comments, isInvalid: comment.body.length > 180 }));
 
 console.log(addedIsInvalid)
 
