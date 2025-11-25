@@ -50,7 +50,6 @@ const cardSelection = () => {
   const question = prompt("Сколько карточек отобразить? От 1 до 5");
   const numbers = Number(question);
 
-
   if ((numbers) && numbers > 0 && numbers <= cardArray.length) {
     outputProductCards(cardArray.slice(0, numbers));
   } else {
