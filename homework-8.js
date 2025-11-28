@@ -14,7 +14,7 @@ function outputProductCards(сards) {
     productCardClone.querySelector('.product-card-category').textContent = productCard.category;
     productCardClone.querySelector('.product-card-name').textContent = productCard.name;
     productCardClone.querySelector('.product-card-description').textContent = productCard.description;
-    productCardClone.querySelector('.product-card-price').innerHTML = productCard.price;
+    productCardClone.querySelector('.product-card-price').innerHTML = `${productCard.price} &#8381;`;
 
     const productCompoundItems = productCardClone.querySelector('.product-card-compound-items');
     productCompoundItems.innerHTML = productCard.compoundItems
@@ -36,7 +36,7 @@ console.log(divisionSigns);
 
 // Задание №5
 const productCardDescription = productCards.reduce((acc, card) => {
-  const titleToDescription = { [card.productName]: card.productDescription };
+  const titleToDescription = { [card.name]: card.description };
   acc.push(titleToDescription)
   return acc;
 }, [])
@@ -44,7 +44,7 @@ const productCardDescription = productCards.reduce((acc, card) => {
 console.log(productCardDescription)
 
 // Задание №6
-const ShowCards = () => {
+const showCards = () => {
   const question = prompt("Сколько карточек отобразить? От 1 до 5");
   const numbers = Number(question);
 
@@ -55,4 +55,4 @@ const ShowCards = () => {
   }
 };
 
-ShowCards();
+showCards()

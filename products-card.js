@@ -7,8 +7,9 @@ export const productCards = [
     compoundItems: [
       "активные натуральные комплексы",
       "витамины С, А, РР, В и Е",
-      "солнцезащитные компоненты"],
-    price: '2750 &#8381;'
+      "солнцезащитные компоненты"
+    ],
+    price: 2750
   },
   {
     img: "images/moisturizing-mask.png",
@@ -18,8 +19,9 @@ export const productCards = [
     compoundItems: [
       "воски", 
       "минералы", 
-      "масла"],
-    price: '3500 &#8381;'
+      "масла"
+    ],
+    price: 3500
   },
   {
     img: "images/cleansing-gel.png",
@@ -29,8 +31,9 @@ export const productCards = [
     compoundItems: [
       "минералы",
       "витамины С, А, РР, В и Е",
-      "солнцезащитные компоненты"],
-    price: '1650 &#8381;'
+      "солнцезащитные компоненты"
+    ],
+    price: 1650
   },
   {
     img: "images/gift-set-1.png",
@@ -40,8 +43,9 @@ export const productCards = [
     compoundItems: [
       "воски", 
       "минералы", 
-      "масла"],
-    price: '4750 &#8381;'
+      "масла"
+    ],
+    price: 4750
   },
   {
     img: "images/gift-set-5.png",
@@ -51,7 +55,8 @@ export const productCards = [
     compoundItems: [
       "воски", 
       "минералы", 
-      "масла"],
-    price: '7520 &#8381;'
+      "масла"
+    ],
+    price: 7520
   }
 ];
