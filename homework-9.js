@@ -1,7 +1,7 @@
 // Задание №4
 
-const footerForm = document.querySelector('#footer-form')
-footerForm.addEventListener('submit', (event) => {
+const emailForm = document.querySelector('#footer-form')
+emailForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const form = event.target;
   const formData = new FormData(form);
@@ -62,8 +62,3 @@ modalForm.addEventListener('submit', (aut) => {
     alert('Неверный логин или пароль')
    }
 })
-
-
-
-
-
