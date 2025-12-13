@@ -1,6 +1,6 @@
 // Задание №4
 
-const emailForm = document.querySelector('#footer-form')
+const emailForm = document.querySelector('#emailForm')
 emailForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const form = event.target;
