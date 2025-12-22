@@ -1,6 +1,6 @@
 export class Form {
-  constructor(register) {
-    this.form = document.querySelector(register);
+  constructor(target) {
+    this.form = document.querySelector(target);
   }
 
   getValues() {
@@ -16,5 +16,3 @@ export class Form {
     this.form.reset();
   }
 }
-
-export const regForm = new Form('#registration-form');
