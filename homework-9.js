@@ -14,8 +14,19 @@ emailForm.addEventListener('submit', (event) => {
 
 const regForm = new Form('#registration-form');
 const authForm = new Form('#modal-form');
-const modal = new Modal('#modal-open', '#modal', '#overlay', '#modal-close');
-modal.modalOpen();
+const modal = new Modal('#modal', '#overlay');
+modal.showModal();
+modal.closeModal();
+
+document.querySelector('#modal-open').addEventListener('click', () => {
+  modal.showModal();
+  console.log(modal.isOpen());
+});
+
+document.querySelector('#modal-close').addEventListener('click', () => {
+  modal.closeModal();
+  console.log(modal.isOpen());
+});
 
 let registrationData = undefined;
 let currentUser = undefined;
