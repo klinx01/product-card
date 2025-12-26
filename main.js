@@ -1,4 +1,4 @@
-import './main.js';
+import './script.js';
 import './homework-5.js';
 import './homework-6.js';
 import './homework-7.js';
@@ -7,3 +7,8 @@ import './homework-9.js';
 import './homework-10.js';
 import './Modal.js';
 import './Form.js';
+import './homework-11/Cafe.js';
+import './homework-11/Coffee.js';
+import './homework-11/Drink.js';
+import './homework-11/Juice.js';
+import './homework-11/Tea.js';
