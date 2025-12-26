@@ -1,4 +1,7 @@
-// Задание №4
+import { Form } from './Form.js';
+import { Modal } from './Modal.js';
+import { Headphones } from './Headphones.js';
+import { WirelessHeadphones } from './WirelessHeadphones.js';
 
 const emailForm = document.querySelector('#email-form')
 emailForm.addEventListener('submit', (event) => {
@@ -9,56 +12,69 @@ emailForm.addEventListener('submit', (event) => {
   console.log(data);
 })
 
-// Задание №5-6
+const regForm = new Form('#registration-form');
+const authForm = new Form('#modal-form');
+const modal = new Modal('#modal', '#overlay');
+modal.showModal();
+modal.closeModal();
 
-let saveRegistration = {};
-const registrationForm = document.querySelector('#registration-form')
-registrationForm.addEventListener('submit', (reg) => {
-  reg.preventDefault()
-  const checkPassword = reg.target;
-  const regFormData = new FormData(checkPassword);
-  const registration = Object.fromEntries(regFormData.entries());
-  registration.createdOn = new Date();
-  saveRegistration = registration;
-  const password = document.querySelector('#password').value;
-  const confirmPassword = document.querySelector('#confirm-password').value;
-  password === confirmPassword ? alert('Регистрация прошла успешно') : alert('Пароли не совпадают')
-  console.log(registration)
-})
-
-// Задание №7-8
-
-const modalOpen = document.querySelector('#modal-open');
-const modal = document.querySelector('#modal');
-const overlay = document.querySelector('#overlay');
-const modalClose = document.querySelector('#modal-close');
-modalOpen.addEventListener('click', () => {
-  overlay.classList.add('overlay-showed');
-  modal.classList.add('modal-showed');
+document.querySelector('#modal-open').addEventListener('click', () => {
+  modal.showModal();
+  console.log(modal.isOpen());
 });
 
-modalClose.addEventListener('click', () => {
-  overlay.classList.remove('overlay-showed');
-  modal.classList.remove('modal-showed');
+document.querySelector('#modal-close').addEventListener('click', () => {
+  modal.closeModal();
+  console.log(modal.isOpen());
 });
 
-// Задание №9-10
+let registrationData = undefined;
+let currentUser = undefined;
 
-let currentUser = undefined
-const modalForm = document.querySelector('#modal-form');
-modalForm.addEventListener('submit', (aut) => {
-  aut.preventDefault();
-  const autForm = aut.target;
-  const autFormData = new FormData(autForm)
-  const authentication = Object.fromEntries(autFormData.entries())
-  if (saveRegistration.userLogin === authentication.userLogin
-  && saveRegistration.userPassword === authentication.userPassword ) {
-    overlay.classList.remove('overlay-showed');
-    modal.classList.remove('modal-showed');
-    alert('Проверка пройдена!');
-    currentUser = saveRegistration;
-    currentUser.lastLogin = new Date()
-  } else {
-    alert('Неверный логин или пароль')
-   }
-})
+const checkReg = () => {
+  regForm.form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const registration = regForm.getValues();
+    registration.createdOn = new Date();
+    if (registration.userPassword === registration.confirmPassword) {
+      alert('Регистрация прошла успешно');
+      setRegistrationData(registration);
+      regForm.reset();
+    } else {
+      alert('Пароли не совпадают');
+    }
+    console.log(registration);
+  });
+}
+
+const authorize = () => {
+  authForm.form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const authData = authForm.getValues();
+    if (
+      registrationData &&
+      registrationData.userLogin === authData.userLogin &&
+      registrationData.userPassword === authData.userPassword
+    ) {
+      alert('Проверка пройдена!');
+      currentUser = { ...registrationData, lastLogin: new Date() };
+      modal.modal.classList.remove('modal-showed');
+      modal.overlay.classList.remove('overlay-showed');
+      authForm.reset();
+    } else {
+      alert('Неверный логин или пароль');
+    }
+  });
+}
+
+const setRegistrationData = (data) => {
+  registrationData = data;
+}
+checkReg();
+authorize();
+
+const headphones = new Headphones('Logitech', 'G335', '50$');
+headphones.showPurchaseInfo();
+
+const wirelessHeadphones = new WirelessHeadphones('Беспроводные', 'Beoplay', 'H95', '1000$');
+wirelessHeadphones.showInfo();

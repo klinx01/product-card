@@ -41,7 +41,7 @@ const productCardDescription = productCards.reduce((acc, card) => {
   return acc;
 }, [])
 
-console.log(productCardDescription)
+
 
 // Задание №6
 const showCards = () => {
