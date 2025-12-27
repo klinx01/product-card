@@ -9,7 +9,7 @@ export class Drink {
   }
 
   getInfo() {
-    return `Название напитка: ${this.name}, Размер: ${this.size}, Стоимость: ${this.price}, Температура: ${this.#temperature}`;
+    return `Название напитка: ${ this.name }, Размер: ${ this.size }, Стоимость: ${ this.price }, Температура: ${ this.#temperature }`;
   }
 
   getTemperature() {
@@ -21,11 +21,11 @@ export class Drink {
   }
 
   #makeDrink() {
-    console.log(`Ваш ${this.name} сейчас готовится баристой`);
+    console.log(`Ваш ${ this.name } сейчас готовится баристой`);
   }
 
   serve() {
     this.#makeDrink();
-    console.log(`Ваш ${this.name} подан`);
+    console.log(`Ваш ${ this.name } подан`);
   }
 }

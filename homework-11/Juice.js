@@ -8,10 +8,6 @@ export class Juice extends Drink {
 
   getInfo() {
     const info = super.getInfo();
-    return (`${info}, Фрукты: ${this.fruits}`);
-  }
-
-  serve() {
-    super.serve();
+    return `${ info }, Фрукты: ${ this.fruits }`;
   }
 }

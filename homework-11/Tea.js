@@ -8,10 +8,6 @@ export class Tea extends Drink {
 
   getInfo() {
     const info = super.getInfo();
-    return (`${info}, Вид чая: ${this.typeTea}`);
-  }
-
-  serve() {
-    super.serve();
+    return `${ info }, Вид чая: ${ this.typeTea }`;
   }
 }

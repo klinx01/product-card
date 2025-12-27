@@ -13,20 +13,56 @@
 <body>
   <div class="registration-container">
     <form id="registration-form">
-      <label>
-        Имя<input class="registration-input" name="userName" required placeholder="Введите имя"></label>
-      <label>
-        Фамилия<input class="registration-input" name="userSurgname" required placeholder="Введите фамилию"></label>
-      <label>
-        Логин<input class="registration-input" name="userLogin" required placeholder="Введите логин"></label>
-      <label>
-        Дата рождения<input type="date" class="registration-input" name="userDateBirth" required placeholder="Введите дату рождения"></label>
-      <label>
-        Email<input type="email" class="registration-input" name="userEmail" required placeholder="Введите Email"></label>
-      <label>
-        Пароль<input id="password" type="password" class="registration-input" name="userPassword" minlength="4" required placeholder="Введите пароль"></label>
-      <label>
-        Проверка пароля<input id="confirm-password" type="password" class="registration-input" name="confirmPassword" minlength="4" required placeholder="Подтверждение пароля"></label>
+      <label>Имя
+        <input
+        class="registration-input"
+        name="userName"
+        required
+        placeholder="Введите имя"></label>
+      <label>Фамилия
+        <input
+        class="registration-input"
+        name="userSurgname"
+        required
+        placeholder="Введите фамилию"></label>
+      <label>Логин
+        <input
+        class="registration-input"
+        name="userLogin"
+        required
+        placeholder="Введите логин"></label>
+      <label>Дата рождения
+        <input
+        type="date"
+        class="registration-input"
+        name="userDateBirth"
+        required
+        placeholder="Введите дату рождения"></label>
+      <label>Email
+        <input
+        type="email"
+        class="registration-input"
+        name="userEmail"
+        required
+        placeholder="Введите Email"></label>
+      <label>Пароль
+        <input
+        id="password"
+        type="password"
+        class="registration-input"
+        name="userPassword"
+        minlength="4"
+        required
+        placeholder="Введите пароль"></label>
+      <label>Проверка пароля
+        <input
+        id="confirm-password"
+        type="password"
+        class="registration-input"
+        name="confirmPassword"
+        minlength="4"
+        required
+        placeholder="Подтверждение пароля"></label>
       <button class="registration-btn" type="submit">Зарегистрироваться</button>
     </form>
   </div>
@@ -36,11 +72,22 @@
       <img src="images/close-icon.svg" alt="Закрыть"></button>
     <h2 class="modal-title">Аутентификация</h2>
     <form class="modal-form" id="modal-form">
-      <label>
-        Логин<input id="modal-lgoin" class="modal-input" name="userLogin" required placeholder="Введите логин"></label>
-      <label>
-        Пароль<input id="modal-password" type="password" class="modal-input" name="userPassword" placeholder="Введите пароль"></label>
-      <button class="modal-reg-btn" type="submit" minlength="4">Войти</button>
+      <label>Логин
+        <input
+        id="modal-login"
+        class="modal-input"
+        name="userLogin"
+        required
+        placeholder="Введите логин"></label>
+      <label>Пароль
+        <input
+        id="modal-password"
+        type="password"
+        class="modal-input"
+        name="userPassword"
+        minlength="4"
+        placeholder="Введите пароль"></label>
+      <button class="modal-reg-btn" type="submit">Войти</button>
     </form>
   </div>
 </div>
@@ -82,7 +129,12 @@
       <p class="footer-label">Подпишись на наши акции:</p>
       <form id="email-form">
         <div class="input-container">
-          <input class="footer-input" type="email" name="footerUserEmail" required placeholder="Введи Email...">
+          <input
+           class="footer-input"
+           type="email"
+           name="footerUserEmail"
+           required
+           placeholder="Введи Email...">
           <button type="submit" class="footer-btn">Подписаться</button>
         </div>
       </form>
