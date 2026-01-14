@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ivan",
+      "surname": "Lapoukhov",
+      "email": "ivanLapoukhov@gmail.com",
+      "age": 12
+    },
+    {
+      "id": 2,
+      "name": "Irina",
+      "surname": "Nikiforyak",
+      "email": "nikiforyak@gmail.com",
+      "age": 23
+    },
+    {
+      "id": 3,
+      "name": "Ruslan",
+      "surname": "Vinogradov",
+      "email": "rusvinogradov@gmail.com",
+      "age": 18
+    },
+    {
+      "id": 4,
+      "name": "Katya",
+      "surname": "Samburskaya",
+      "email": "sambufer@gmail.com",
+      "age": 33
+    },
+    {
+      "id": 5,
+      "name": "Azrath",
+      "surname": "detrons",
+      "email": "azrathdetrons@gmail.com",
+      "age": 43
+    }
+  ]
+}
+

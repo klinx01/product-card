@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.loading-msg {
+  text-align: center;
+  font-size: 26px;
+  margin-top: 50px;
+  color: #01080be1;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin: 20px;
+}
+
+.button-wrapper button {
+  margin-right: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #515076;
+  border-radius: 4px;
+  background: #f0f0f0;
+}
+
+.user-card {
+  border: 1px solid #010001;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.user-card p {
+  margin: 6px;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid #d9534f;
+  border-radius: 4px;
+  background: #f9d6d5;
+  color: #d9534f;
+}
