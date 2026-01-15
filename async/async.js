@@ -1,4 +1,3 @@
-localStorage.removeItem("users")
 const usersContainer = document.querySelector("#users-container");
 const loadingMsg = document.querySelector(".loading-msg");
 const template = document.querySelector("#user-template");
@@ -6,9 +5,9 @@ const btnGetAll = document.querySelector("#get-all");
 const btnRemoveAll = document.querySelector("#remove-all");
 
 function loadData() {
-  const data = localStorage.getItem("users");
-  if (data !== null) {
-    renderUsers(JSON.parse(data));
+  const users = getUsersFromStorage();
+  if (users) {
+    renderUsers(users);
   } else {
     loadingMsg.textContent = "Данные загружаются...";
     setTimeout(() => {
@@ -45,7 +44,7 @@ function renderUsers(users) {
 }
 
 function deleteUser(id) {
-  const users = JSON.parse(localStorage.getItem("users"));
+  const users = getUsersFromStorage();
   const newUsers = users.filter(user => user.id !== id);
   localStorage.setItem("users", JSON.stringify(newUsers));
   renderUsers(newUsers);
@@ -58,10 +57,14 @@ function removeAllUsers() {
 }
 
 function getAllUsers() {
-loadData();
+  loadData();
 }
 
 btnGetAll.onclick = getAllUsers;
 btnRemoveAll.onclick = removeAllUsers;
+
+function getUsersFromStorage() {
+  return JSON.parse(localStorage.getItem("users"));
+}
 
 loadData();
