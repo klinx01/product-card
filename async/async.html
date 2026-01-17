@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="async.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <p class="loading-msg">Данные загружаются...</p>
+  <div class="button-wrapper">
+    <button type="button" id="get-all">Получить всех</button>
+    <button type="button" id="remove-all">Удалить всех</button>
+  </div>
+  <div id="users-container"></div>
+  <template id="user-template">
+    <div class="user-card">
+      <p class="user-name"></p>
+      <p class="user-email"></p>
+      <p class="user-age"></p>
+      <button type="button" class="delete-btn">Удалить</button>
+    </div>
+  </template>
+  <script type="module" src="async.js"></script>
+</body>
+</html>
